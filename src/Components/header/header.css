@@ -1,0 +1,47 @@
+@import "../../fonts.css";
+
+.headerWrapper {
+    display: flex;
+    padding: 35px 20px 10px 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.headerTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.headerSubtitle {
+    color: #746f6f;
+    font-size: .9rem;
+}
+
+.headerWrapper .leftArrow {
+    width: 25px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: .3rem .4rem;
+    color: white;
+    margin-right: 1rem;
+    background: rgba(0, 0, 0, 0.43);
+}
+
+.headerWrapper .leftArrow .icon {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.headerWrapper .noAction {
+    display: none;
+    appearance: none;
+}

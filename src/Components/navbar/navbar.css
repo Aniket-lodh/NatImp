@@ -1,0 +1,48 @@
+@import "../../fonts.css";
+
+.navContainer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+
+    max-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.iContainers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.icons {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.iContainers small {
+    font-size: .8rem;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    margin-top: .5rem;
+    color: #818080;
+}
+.iContainers.active,
+.iContainers.active small{
+    color: #3581CF;
+}

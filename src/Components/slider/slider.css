@@ -1,0 +1,83 @@
+
+.carousal-container {
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.trendingCards {
+    width: 180px;
+    max-width: 180px;
+    height: max-content;
+    min-height: 110px;
+    max-height: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: .6rem;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    user-select: none;
+}
+
+.trImg {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.trDesc {
+    margin-top: 10px;
+    display: flex;
+    height: 90px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.trHighlight {
+    font-size: .5rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    padding: 3px;
+    border-radius: 2px;
+    background: #0DA64A;
+    text-transform: uppercase;
+}
+
+.trCaption {
+    font-size: .9rem;
+    font-weight: bold;
+    line-height: 140%;
+    margin-top: 10px;
+}
+
+small {
+    font-size: .5rem;
+    color: #746F6F;
+    margin-top: 1rem;
+}
+
+
+.trDesc .subtitleActive {
+    color: #3581CF;
+    font-size: .6rem;
+    margin: 0 .5rem 0 0;
+}
+
+.trDesc .subtitleActive + span {
+    color: #3581CF;
+}
+
+.noHighLight {
+    display: none;
+    appearance: none;
+}
+
+.trHeaderCaption {
+    font-size: .8rem;
+    line-height: 140%;
+}
