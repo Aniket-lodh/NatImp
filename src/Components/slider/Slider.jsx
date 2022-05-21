@@ -23,7 +23,6 @@ export default function Slider(props) {
             partialVisibilityGutter: 150
         }
     };
-    console.log(props)
     return (
         <Carousel responsive = {responsive}
                   arrows = {true}
@@ -39,12 +38,6 @@ export default function Slider(props) {
                   partialVisbile = {true}
                   className = "carousal-container"
         >
-            {/*{photos.map((photo, i) => (*/}
-            {/*    <div className = "hotelImgWrapper">*/}
-            {/*        <img onClick = {() => handleOpen(i)} src = {photo.src} alt = "HotelImage"*/}
-            {/*             className = "hotelImg" />*/}
-            {/*    </div>*/}
-            {/*))}*/}
             {
                 props.cards.map((cardItem, i) => (
                     <div className = "trendingCards" key = {i}>

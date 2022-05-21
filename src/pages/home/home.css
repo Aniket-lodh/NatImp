@@ -1,3 +1,41 @@
-.home{
-    margin-bottom: 50px;
+.home {
+    padding-bottom: 70px;
+    background: #f1f1f1;
+
+}
+
+.takeActionContainer {
+    padding:20px;
+    width: 300px;
+    height: 100px;
+    background: white;
+    margin: 1rem auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.takeActionContainer p {
+    color: #818080;
+    font-size: 15px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.takeActionButton button,
+.takeActionButton {
+    width: 100%;
+}
+
+.takeActionButton button {
+    cursor: pointer;
+    padding: .5rem;
+    border: none;
+    outline: none;
+    background: #3581CF;
+    color: white;
+    font-size: .9rem;
+    border-radius: 3px;
 }

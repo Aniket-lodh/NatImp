@@ -2,7 +2,9 @@
 
 .headerWrapper {
     display: flex;
+    position: relative;
     padding: 35px 20px 10px 20px;
+    margin-bottom: 20px;
 }
 
 header {
@@ -23,9 +25,13 @@ header {
 }
 
 .headerWrapper .leftArrow {
-    width: 25px;
-    height: 24px;
+    position: absolute;
+    top: 43%;
+    left: 20px;
+    width: 24px;
+    height: 26px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -33,6 +39,10 @@ header {
     color: white;
     margin-right: 1rem;
     background: rgba(0, 0, 0, 0.43);
+}
+
+.leftArrow + header {
+    margin-left: 3rem;
 }
 
 .headerWrapper .leftArrow .icon {

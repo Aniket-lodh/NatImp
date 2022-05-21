@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../Components/navbar/Navbar";
 import Header from "../../Components/header/Header";
 import Slider from "../../Components/slider/Slider";
@@ -116,18 +117,32 @@ export default function Home() {
             ]
         }
     }
+    //Handles which page it will redirect
+    const navigate = useNavigate()
+    const handleAction = () => {
+        navigate("/actions")
+    }
 
     return (
         <div className = "home">
             <Header action = {headerProps.action} text = {headerProps.text}
                     subheader = {headerProps.subheader} />
-
             <Slider {...sprops.trendingCards} />
 
             <Header action = {headerProps.action} text = {headerProps.text = "What's the Impact?"}
                     subheader = {headerProps.subheader = "hidden"} />
-
             <Slider {...sprops.impactCards} />
+
+            <Header action = {headerProps.action} text = {headerProps.text = "What Should we Do?"}
+                    subheader = {headerProps.subheader = "hidden"} />
+            <div className = "takeActionContainer">
+                <p>Take action and planning ahead for the scarcity resource</p>
+                <div className = "takeActionButton" onClick = {handleAction}>
+                    <button>
+                        Take Action
+                    </button>
+                </div>
+            </div>
             <Navbar />
         </div>
     )
