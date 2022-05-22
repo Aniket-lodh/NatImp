@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Action from "./pages/action/Action";
+import  "remixicon/fonts/remixicon.css";
 
 function App() {
     return (

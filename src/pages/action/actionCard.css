@@ -1,0 +1,91 @@
+.acContainer {
+    height: max-content;
+    min-height: 100vh;
+    padding: 10px 20px;
+}
+
+.acContainer p {
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 140%;
+    color: #818080;
+    margin-bottom: 1rem;
+}
+
+.acWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 10px 10px;
+}
+
+.cards {
+    border: calc(1px / 2) solid #827f7f;
+    background: white;
+    border-radius: 10px;
+    padding: 20px 15px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cards.accordion-open {
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.cards.accordion-open .tasksContainer {
+    height: max-content;
+}
+
+.header {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h4 {
+    width: 100%;
+}
+
+.header i {
+    font-size: 1.4rem;
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-open .header i {
+    transform: rotate(-180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.tasksContainer {
+    height: 0;
+    margin-top: .5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tasks {
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid grey;
+}
+
+.tasks p {
+    margin: 0;
+    color: #3581CF;
+}
+
+.tasks div {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.tasks div i {
+    font-size: 1.3rem;
+    color: #3581CF;
+}
