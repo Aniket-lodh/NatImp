@@ -16,9 +16,9 @@ export default function Action() {
     return (
         <div className={"takeActionPage"}>
             <Header action={headerProps.action} text={headerProps.text}
-                    subheader={headerProps.subheader} />
-            <Navbar/>
+                    subheader={headerProps.subheader}/>
             <ActionCards/>
+            <Navbar/>
         </div>
     )
 }
