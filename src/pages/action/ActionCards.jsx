@@ -2,6 +2,12 @@ import "./actionCard.css";
 import {useNavigate} from "react-router-dom";
 
 export default function ActionCards() {
+    const navigate = useNavigate();
+    // Function to decide which specific route has to open for each tasks by using useNavigate hook
+    const handleCardsRoute = (cardId) => {
+        navigate(`/actions/${cardId}`)
+    }
+
     // Function to handle the clicks on the accordions
     const handleCards = (item) => {
         // Setting the parentNode of the header
@@ -26,11 +32,7 @@ export default function ActionCards() {
             item.classList.add('accordion-open')
         }
     }
-    const navigate = useNavigate();
-    // Function to decide which specific route has to open for each tasks by using useNavigate hook
-    const handleCardsRoute = (cardId) => {
-        navigate(`/actions/${cardId}`)
-    }
+
 
     return (
         <div className="acContainer">
@@ -58,7 +60,7 @@ export default function ActionCards() {
                                  <span>
                                       <i className="ri-checkbox-line"></i>
                                  </span>
-                                <h5>Water-saving habits</h5>
+                                <h5>Support Clean water</h5>
                             </div>
                             <p>View</p>
                         </div>

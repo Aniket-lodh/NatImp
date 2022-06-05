@@ -1,5 +1,5 @@
-import { faCopy } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faCopy} from "@fortawesome/free-regular-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./slider.css";
@@ -24,41 +24,41 @@ export default function Slider(props) {
         }
     };
     return (
-        <Carousel responsive = {responsive}
-                  arrows = {true}
-                  autoPlay = {false}
-                  autoPlaySpeed = {3000}
-                  containerClass = "container"
-                  draggable = {true}
-                  focusOnSelect = {false}
-                  keyBoardControl = {false}
-                  minimumTouchDrag = {80}
-                  renderButtonGroupOutside = {false}
-                  renderDotsOutside = {false}
-                  partialVisbile = {true}
-                  className = "carousal-container"
+        <Carousel responsive={responsive}
+                  arrows={true}
+                  autoPlay={false}
+                  autoPlaySpeed={3000}
+                  containerClass="container"
+                  draggable={true}
+                  focusOnSelect={false}
+                  keyBoardControl={false}
+                  minimumTouchDrag={80}
+                  renderButtonGroupOutside={false}
+                  renderDotsOutside={false}
+                  partialVisible={true}
+                  className="carousal-container"
         >
             {
                 props.cards.map((cardItem, i) => (
-                    <div className = "trendingCards" key = {i}>
-                        <img src = {cardItem.img.src} alt = "" className = {cardItem.img.src ? "trImg" : "noHighLight"} />
+                    <div className="trendingCards" key={i}>
+                        <img src={cardItem.img.src} alt="" className={cardItem.img.src ? "trImg" : "noHighLight"}/>
 
-                        <h4 className = {cardItem.header ? 'trHeader' : "noAction"}>
+                        <h4 className={cardItem.header ? 'trHeader' : "noAction"}>
                             {cardItem.header}
                         </h4>
 
-                        <div className = "trDesc">
-                            <p className = {cardItem.highlightState === true ? "trHighlight" : "noHighLight"}>
+                        <div className="trDesc">
+                            <p className={cardItem.highlightState === true ? "trHighlight" : "noHighLight"}>
                                 {cardItem.highLightText}
                             </p>
-                            <p className = {cardItem.header ? "trHeaderCaption" : "trCaption"}>
+                            <p className={cardItem.header ? "trHeaderCaption" : "trCaption"}>
                                 {cardItem.caption}
                             </p>
 
                             <small>
                                 <span
-                                    className = {cardItem.subtitleIconState === true ? 'subtitleActive' : 'noHighLight'}>
-                                        <FontAwesomeIcon icon = {faCopy} />
+                                    className={cardItem.subtitleIconState === true ? 'subtitleActive' : 'noHighLight'}>
+                                        <FontAwesomeIcon icon={faCopy}/>
                                 </span>
                                 <span>
                                         {cardItem.subtitleIconState === true ? "Related Article" : cardItem.subtitle}

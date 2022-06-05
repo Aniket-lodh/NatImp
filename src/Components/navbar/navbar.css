@@ -50,7 +50,7 @@ nav {
     color: #818080;
 }
 
-.iContainers.active,
-.iContainers.active small {
+.iContainers.activeNav,
+.iContainers.activeNav small {
     color: #3581CF;
 }

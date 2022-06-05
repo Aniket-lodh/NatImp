@@ -26,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     row-gap: .5rem;
+    cursor: copy;
 }
 
 .dropzone i {
@@ -38,14 +39,119 @@
     font-size: 13px;
 }
 
-#submitButton {
+
+.dialog-open {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dialogModalWrapper {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.58);
+    transition: all 0.5s ease-in-out
+
+}
+
+.dialogModalWrapper.active-Dialog {
+    display: flex;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-color: #3581CF;
-    background: transparent;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/*.dialogModalWrapper.active-Dialog {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    overflow: hidden;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    z-index: 999;*/
+/*    opacity: 1;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    transition: all 0.3s ease-in-out;*/
+/*}*/
+
+.dialog {
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+.active-Dialog .dialog {
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 220px;
+    height: fit-content;
+    padding: 20px 0;
+    overflow: hidden;
+    z-index: 100;
+    background: white;
+    border-radius: 15px;
+}
+
+.dialog-header {
+    display: flex;
+    padding: 0 20px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-header i {
+    font-size: 1.3rem;
+}
+
+.contentsWrapper {
+    padding: 20px 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+}
+
+.contents {
+    font-size: 15px;
+    line-height: 140%;
+    color: #535151;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+.confShare, .skipShare {
     padding: 10px;
-    border-radius: 5px;
-    color: #3581CF;
-    font-size: 1rem;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border-radius: 7px;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 1rem;
+    position: relative;
+}
+
+.confShare {
+    border: 2px solid #3581CF;
+    color: #3581CF;
+}
+
+.skipShare {
+    color: #565656;
+    border: 2px solid #565656;
 }

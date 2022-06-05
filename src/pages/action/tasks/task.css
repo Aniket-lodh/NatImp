@@ -60,9 +60,15 @@ body {
     border-radius: 15px;
     height: max-content;
     overflow: hidden;
+    margin-bottom: 1.5rem;
     border: calc(1px / 2) solid rgba(130, 127, 127, 0.28);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
     transition: all 0.3s ease;
+}
+
+.Header-wrapper span,
+.taskCards {
+    cursor: pointer;
 }
 
 .tcHeader-wrapper {
@@ -76,7 +82,7 @@ body {
 }
 
 .tcHeader {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 100%;
 }
 
@@ -90,7 +96,7 @@ body {
 
 .accordion-open .tcdropdownContainer {
     opacity: 1;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
 }
 
 i.ri-arrow-down-s-line {
@@ -101,4 +107,57 @@ i.ri-arrow-down-s-line {
 .accordion-open i.ri-arrow-down-s-line {
     transform: rotate(180deg);
     transition: all 0.2s ease;
+}
+
+.tcSubheader {
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 140%;
+    color: #858484;
+    margin-bottom: 1rem;
+}
+
+#submitButton {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    border-color: #3581CF;
+    background: transparent;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #3581CF;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    outline: none;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+
+#submitButton:hover, .confShare:hover {
+    color: white;
+}
+
+#submitButton:before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    background: #3581CF;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: -1;
+    border: 3px solid #3581CF;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    transform: scale(1) translate(6px, -3px);
+}
+
+#submitButton:hover::before {
+    opacity: 1;
+    transform-origin: center;
+    border-radius: 5px;
+    transform: scale(22);
 }

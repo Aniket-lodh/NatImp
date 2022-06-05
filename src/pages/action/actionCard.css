@@ -23,6 +23,7 @@
 
 .cards {
     width: 280px;
+    cursor: pointer;
     border: calc(1px / 2) solid rgba(130, 127, 127, 0.28);
     background: white;
     border-radius: 10px;
